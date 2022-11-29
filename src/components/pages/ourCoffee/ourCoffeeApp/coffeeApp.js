@@ -7,7 +7,7 @@ import Cards from '../cards/cards';
 import Footer from '../../../footer/footer';
 import { Component } from "react";
 import { goods } from '../../../../goods';
-// import prod from '../../../../images/Aromistico.png';
+
 
 
 export default class CoffeeApp extends Component {
@@ -22,7 +22,6 @@ export default class CoffeeApp extends Component {
 
 	onOpenDescription = (id) => {
 		const { data } = this.state;
-		console.log(data)
 		data.forEach(item => {
 			if (item.id === id) {
 				this.country = item.country;

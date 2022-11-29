@@ -1,6 +1,6 @@
 import './aboutProd.scss';
 import coffeProd from '../../images/Aromistico.png'
-import { goods } from '../../goods';
+
 
 
 export default function AboutProd(props) {
