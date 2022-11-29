@@ -1,11 +1,13 @@
 import HeroPage from '../../../hero/heroPage';
 import AboutPage from '../../../about/aboutPage';
+import AboutProd from '../../../aboutProd/aboutProd';
 import Search from '../search/search';
 import Filter from '../filter/filter';
 import Cards from '../cards/cards';
 import Footer from '../../../footer/footer';
 import { Component } from "react";
 import { goods } from '../../../../goods';
+// import prod from '../../../../images/Aromistico.png';
 
 
 export default class CoffeeApp extends Component {
@@ -16,6 +18,18 @@ export default class CoffeeApp extends Component {
 			term: '',
 			filter: ''
 		}
+	}
+
+	onOpenDescription = (id) => {
+		const { data } = this.state;
+		console.log(data)
+		data.forEach(item => {
+			if (item.id === id) {
+				this.country = item.country;
+				this.price = item.price;
+			}
+			this.setState({ isOpen: true })
+		})
 	}
 
 	searchEmpt = (items, term) => {
@@ -49,22 +63,23 @@ export default class CoffeeApp extends Component {
 	}
 
 	render() {
-		const { data, term, filter } = this.state;
+		const { data, term, filter, isOpen } = this.state;
 		const visibleData = this.filterPost((this.searchEmpt(data, term)), filter);
 		return (
 			<>
 				<HeroPage title="Our Coffee" />
-				<AboutPage
-					title="About our beans"
-					data="our"
-				/>
-				<section className="filter">
-					<Search onUpdateSearch={this.onUpdateSearch} />
-					<Filter filter={filter}
-						onFilterSelect={this.onFilterSelect}
-					/>
-				</section>
-				<Cards data={visibleData} onToggleProp={this.onToggleProp} />
+
+				{!isOpen ?
+					<>
+						<AboutPage title="About our beans" data="our" />
+						<section className="filter">
+							<Search onUpdateSearch={this.onUpdateSearch} />
+							<Filter filter={filter} onFilterSelect={this.onFilterSelect} />
+						</section>
+						<Cards data={visibleData} onToggleProp={this.onToggleProp} onOpenDescription={this.onOpenDescription} />
+					</> :
+					<AboutProd title="About our beans" isOpen={isOpen} data="our" country={this.country} price={this.price} />
+				}
 				<Footer />
 			</>
 		)

@@ -1,10 +1,18 @@
 import CardProd from "../cardProd/cardProd";
 import "../cardProd/cardProd.scss";
 
-export default function Cards(props) {
+export default function Cards({ data, onOpenDescription }) {
 
-	const cards = props.data.map(item => {
+	const cards = data.map(item => {
 		const { id, ...itemProps } = item;
+		if (onOpenDescription) {
+			return (
+				<CardProd key={id}
+					{...itemProps}
+					onOpenDescription={() => onOpenDescription(id)}
+				/>
+			)
+		}
 		return (
 			<CardProd key={id}
 				{...itemProps}

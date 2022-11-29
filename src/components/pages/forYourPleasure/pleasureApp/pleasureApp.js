@@ -4,7 +4,7 @@ import AboutPage from '../../../about/aboutPage';
 import Cards from '../../ourCoffee/cards/cards';
 import { goods } from '../../../../goods';
 
-export default function PleasureApp(props) {
+export default function PleasureApp() {
 	return (
 		<>
 			<HeroPage title="For your pleasure" />
