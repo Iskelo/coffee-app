@@ -4,14 +4,14 @@ import Home from '../pages/home/homeApp/homeApp';
 import CoffeeApp from "../pages/ourCoffee/ourCoffeeApp/coffeeApp";
 import PleasureApp from '../pages/forYourPleasure/pleasureApp/pleasureApp';
 import Product from '../pages/products/product/product';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from '../pages/layout';
 
 
 
 export default function App(props) {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Layout />} >
           <Route index element={<Home />} />
@@ -20,7 +20,7 @@ export default function App(props) {
           <Route path='product' element={<Product />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
