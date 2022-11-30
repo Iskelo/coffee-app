@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e81b33b5.css",
+    "main.js": "/static/js/main.6dfee4fd.js",
+    "static/media/bg-group.png": "/static/media/bg-group.88c602093c7a9c14581c.png",
+    "static/media/bg-hero.png": "/static/media/bg-hero.165018277ba78693de7d.png",
+    "static/media/pleasure-bg.png": "/static/media/pleasure-bg.d96e3b1ac65731ed13cb.png",
+    "static/media/coffee-shop-bg.png": "/static/media/coffee-shop-bg.0766f8aa3c68c5ede2d9.png",
+    "static/media/Aromistico.png": "/static/media/Aromistico.3f05b148c2749aff93db.png",
+    "static/media/coffee-about.png": "/static/media/coffee-about.ee0892191aafb3f7ea98.png",
+    "static/media/coffee-about2.png": "/static/media/coffee-about2.6568d51aa20485987f1d.png",
+    "static/media/aromatico.png": "/static/media/aromatico.abb45c1ba257a5364ef1.png",
+    "static/media/solimo.png": "/static/media/solimo.25d5ad4a54bdd9afbde4.png",
+    "static/media/presto.png": "/static/media/presto.7d9f028b14b6f1708735.png",
+    "index.html": "/index.html",
+    "main.e81b33b5.css.map": "/static/css/main.e81b33b5.css.map",
+    "main.6dfee4fd.js.map": "/static/js/main.6dfee4fd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e81b33b5.css",
+    "static/js/main.6dfee4fd.js"
+  ]
+}
