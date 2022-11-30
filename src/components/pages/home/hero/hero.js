@@ -1,5 +1,5 @@
 import './hero.scss'
-
+import { Link } from 'react-router-dom';
 const Hero = () => {
 	return (
 		<section className='hero'>
@@ -16,7 +16,7 @@ const Hero = () => {
 					<p>We makes every day full of energy and taste</p>
 					<p>Want to try our beans?</p>
 				</div>
-				<a className='btn' href='#group'>More</a>
+				<Link className='btn' to='/coffee'>More</Link>
 			</div>
 		</section>
 	)
